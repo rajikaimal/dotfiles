@@ -48,6 +48,7 @@ Plugin 'itmammoth/doorboy.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'cespare/vim-toml'
 Plugin 'rust-lang/rust.vim'
+Plugin 'machakann/vim-highlightedyank'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
