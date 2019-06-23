@@ -67,6 +67,7 @@ filetype plugin indent on    " required
 " " Put your non-Plugin stuff after this line
 let g:javascript_plugin_jsdoc = 1
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+let NERDTreeShowHidden=1
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
