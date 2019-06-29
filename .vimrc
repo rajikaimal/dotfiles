@@ -3,11 +3,15 @@ set autoindent
 set backspace=indent,eol,start
 set copyindent
 set smartindent
+set shiftwidth=2
 set tabstop=2
 syntax enable
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
+" highlight search hits
+set hlsearch
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -72,4 +76,5 @@ let NERDTreeShowHidden=1
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 map <C-n> :NERDTreeToggle<CR>
