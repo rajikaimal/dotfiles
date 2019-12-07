@@ -55,6 +55,7 @@ Plugin 'cespare/vim-toml'
 Plugin 'rust-lang/rust.vim'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'fatih/vim-go'
+Plugin 'evanleck/vim-svelte'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
