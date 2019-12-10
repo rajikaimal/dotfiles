@@ -56,6 +56,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'fatih/vim-go'
 Plugin 'evanleck/vim-svelte'
+Plugin 'easymotion/vim-easymotion'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
