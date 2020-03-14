@@ -58,7 +58,7 @@ Plugin 'fatih/vim-go'
 Plugin 'evanleck/vim-svelte'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'itchyny/lightline.vim'
-
+Plugin 'myusuf3/numbers.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
