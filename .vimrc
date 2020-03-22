@@ -59,6 +59,7 @@ Plugin 'evanleck/vim-svelte'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'itchyny/lightline.vim'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
