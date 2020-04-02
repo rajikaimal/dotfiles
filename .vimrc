@@ -61,6 +61,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'terryma/vim-smooth-scroll'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
