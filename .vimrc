@@ -1,4 +1,5 @@
 set number
+set belloff=all
 set autoindent
 set backspace=indent,eol,start
 set copyindent
