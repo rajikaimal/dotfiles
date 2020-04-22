@@ -4,6 +4,7 @@ set autoindent
 set backspace=indent,eol,start
 set copyindent
 set smartindent
+set noswapfile
 set shiftwidth=2
 set tabstop=2
 
