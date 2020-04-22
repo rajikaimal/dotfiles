@@ -1,6 +1,6 @@
 # vimrc
 
-:rocket: Minimal and messy .vimrc file for JavaScript, Go, Rust, Svelte development
+:rocket: Minimal and messy .vimrc file for JavaScript, Go, Rust, and Svelte development
 
 ## Install
 
