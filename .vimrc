@@ -59,7 +59,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:javascript_plugin_jsdoc = 1
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.svelte'
 let NERDTreeShowHidden=1
 
 autocmd StdinReadPre * let s:std_in=1
