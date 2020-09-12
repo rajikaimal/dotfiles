@@ -72,6 +72,11 @@ noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
+" Fugitive Conflict Resolution
+nnoremap <leader>gd :Gvdiff<CR>
+nnoremap gdh :diffget //2<CR>
+nnoremap gdl :diffget //3<CR>
+
 " ALE svelte config
 let g:ale_linter_aliases = {'svelte': ['css', 'javascript']}
 let g:ale_linters = {'svelte': ['stylelint', 'eslint']}
