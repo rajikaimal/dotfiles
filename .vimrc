@@ -55,6 +55,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'w0rp/ale'
 Plugin 'neoclide/coc.nvim'
+Plugin 'preservim/nerdcommenter'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
