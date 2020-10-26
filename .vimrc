@@ -20,6 +20,8 @@ filetype off                  " required
 " highlight search hits
 set hlsearch
 
+let mapleader = ","
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
