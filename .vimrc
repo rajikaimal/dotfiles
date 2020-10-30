@@ -66,6 +66,8 @@ let g:javascript_plugin_jsdoc = 1
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.svelte'
 let NERDTreeShowHidden=1
 
+let g:go_fmt_command = "goimports"
+
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
