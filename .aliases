@@ -1,0 +1,5 @@
+# --- Aliases ---
+
+alias gl='git pull'
+alias gp='git push'
+alias gst='git status'
