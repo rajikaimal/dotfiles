@@ -8,13 +8,13 @@ ALIASES=$HOME/.aliases
 GITCONFIG=$HOME/.gitconfig
 GITIGNORE=$HOME/.gitignore
 
-# Install oh-my-zsh
+# config files
+# install oh-my-zsh
 if [ ! -e "$OHMYZSH" ]; then
     echo "installing oh-my-zsh ..."
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
-
 
 echo $ZSHRC
 
@@ -38,6 +38,25 @@ if [ ! -e "$GITIGNORE" ]; then
     ln .gitignore $GITIGNORE
 fi
 
-echo "syncing ..."
+# vim
+if [ -d "$HOME/.vim/bundle" ]
+then
+	echo "vundle already installed"
+else
+	echo "--- vundle is a prerequisite for this .vimrc ---"
+	echo "--- please install Vundle ---"
+	echo "https://github.com/VundleVim/Vundle.vim#quick-start"
+fi
+
+echo "copying .vimrc ... \n"
+
+cp .vimrc $HOME/.vimrc
+
+echo ".vimrc copied"
+echo "⚠️ :PluginInstall"
+
+echo ":source ..."
+
 source $ZSHRC
+
 echo "exit 0"
