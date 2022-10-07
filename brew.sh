@@ -56,3 +56,5 @@ brew install wget
 brew install zlib
 brew install zsh-autosuggestions
 brew install dopplerhq/cli/doppler
+brew install cask docker
+brew install k9s
