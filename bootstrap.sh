@@ -24,7 +24,7 @@ if [ ! -e "$ZSHRC" ]; then
 fi
 
 if [ ! -e "$ALIASES" ]; then
-    echo "Linking .aliases ..."
+    echo "linking .aliases ..."
     ln .aliases $ALIASES
 fi
 
@@ -36,6 +36,23 @@ fi
 if [ ! -e "$GITIGNORE" ]; then
     echo "linking .gitignore ..."
     ln .gitignore $GITIGNORE
+fi
+
+# python
+brew install pyenv
+pyenv update && pyenv install-latest
+
+# nvm
+echo "--- installing .nvm ---"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+# node
+if (( $+commands[node] )); then
+    print -P "%F{yellow}node is already installed %f\n"
+else
+    print -P "%F{green}installing node%f\n"
+    . ~/.nvm/nvm.sh
+    nvm install node # "node" is an alias for the latest version
 fi
 
 # vim
