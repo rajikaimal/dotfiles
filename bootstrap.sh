@@ -2,7 +2,7 @@
 
 echo "--- bootstrapping dotfiles ---"
 
-OHMYZSH=/Users/rajikai/.oh-my-zsh
+OHMYZSH=$HOME/.oh-my-zsh
 ZSHRC=$HOME/.zshrc
 ALIASES=$HOME/.aliases
 GITCONFIG=$HOME/.gitconfig
