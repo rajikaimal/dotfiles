@@ -1,5 +1,7 @@
 # dotfiles
 
->> WIP
+```
+$ zsh bootstrap.sh
+```
 
 MIT

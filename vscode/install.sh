@@ -1,3 +1,5 @@
+#!/usr/bin/zsh
+
 code --install-extension cmstead.js-codeformer
 code --install-extension cmstead.jsrefactor
 code --install-extension denoland.vscode-deno
@@ -21,3 +23,6 @@ code --install-extension rvest.vs-code-prettier-eslint
 code --install-extension vscodevim.vim
 code --install-extension wix.vscode-import-cost
 code --install-extension zhuangtongfa.material-theme
+
+# copy settings file
+cp settings.json ~/Library/Application Support/Code/User/settings.json

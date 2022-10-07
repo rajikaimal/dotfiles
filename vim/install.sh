@@ -1,18 +1,19 @@
-#!/bin/sh
+#!/usr/bin/zsh
 
 if [ -d "$HOME/.vim/bundle" ]
 then
-	echo "Vundle already installed"
+	echo "vundle already installed"
 else
-	echo "Vundle is a prerequisite for this .vimrc"
-	echo "Please install Vundle,"
-	echo "Install: https://github.com/VundleVim/Vundle.vim#quick-start"
+	echo "--- vundle is a prerequisite for this .vimrc ---"
+	echo "--- please install Vundle ---"
+	echo "https://github.com/VundleVim/Vundle.vim#quick-start"
 fi
 
-echo "Copying .vimrc ... \n"
+echo "copying .vimrc ... \n"
 
 cp .vimrc $HOME/.vimrc
 
 echo ".vimrc copied"
-echo ":source %"
-echo ":PluginInstall"
+echo "⚠️ :PluginInstall"
+
+echo ":source ..."

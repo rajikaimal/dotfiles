@@ -39,23 +39,12 @@ if [ ! -e "$GITIGNORE" ]; then
 fi
 
 # vim
-if [ -d "$HOME/.vim/bundle" ]
-then
-	echo "vundle already installed"
-else
-	echo "--- vundle is a prerequisite for this .vimrc ---"
-	echo "--- please install Vundle ---"
-	echo "https://github.com/VundleVim/Vundle.vim#quick-start"
-fi
+echo "--- setting up .vimrc ---"
+zsh ./vim/install.sh
 
-echo "copying .vimrc ... \n"
-
-cp .vimrc $HOME/.vimrc
-
-echo ".vimrc copied"
-echo "⚠️ :PluginInstall"
-
-echo ":source ..."
+# vscode
+echo "--- installing VSCode plugins ---"
+zsh ./vscode/install.sh
 
 source $ZSHRC
 
