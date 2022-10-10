@@ -11,9 +11,15 @@ fi
 
 echo "copying .vimrc ... \n"
 
-cp .vimrc $HOME/.vimrc
+ln vim/.vimrc $HOME/.vimrc
 
-echo ".vimrc copied"
+echo "linked .vimrc"
 echo "⚠️ :PluginInstall"
 
+# run :PluginInstall non interactively
+vim +'PlugInstall --sync' +qa
+
 echo ":source ..."
+
+# build coc.nvim
+cd $HOME/.vim/bundle/coc.nvim && npm i && npm run build

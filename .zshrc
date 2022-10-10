@@ -4,8 +4,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 plugins=(
     git
     zsh-autosuggestions
@@ -16,9 +14,16 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=/opt/homebrew/bin:$PATH
 
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# deno
 export DENO_INSTALL="/Users/rajikai/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# vscode
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

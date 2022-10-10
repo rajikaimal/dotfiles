@@ -44,6 +44,7 @@ brew install libmatio
 brew install llvm
 brew install nghttp2
 brew install node
+brew install deno
 brew install openblas
 brew install qt
 brew install poppler
