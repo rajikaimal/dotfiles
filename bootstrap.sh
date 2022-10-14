@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
 
-echo "--- bootstrapping dotfiles ---"
+print -P "%F{green}--- bootstrapping dotfiles ---%f\n"
 
 OHMYZSH=$HOME/.oh-my-zsh
 ZSHRC=$HOME/.zshrc
@@ -11,7 +11,7 @@ GITIGNORE=$HOME/.gitignore
 # config files
 # install oh-my-zsh
 if [ ! -e "$OHMYZSH" ]; then
-    echo "installing oh-my-zsh ..."
+    print -P "%F{green}installing oh-my-zsh ...%f\n"
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
@@ -19,22 +19,22 @@ fi
 echo $ZSHRC
 
 if [ ! -e "$ZSHRC" ]; then
-    echo "linking .zhsrc ..."
+    print -P "%f{green}linking .zhsrc ...%f\n"
     ln .zshrc $ZSHRC
 fi
 
 if [ ! -e "$ALIASES" ]; then
-    echo "linking .aliases ..."
+    print -P "%f{yellow}linking .aliases ...%f\n"
     ln .aliases $ALIASES
 fi
 
 if [ ! -e "$GITCONFIG" ]; then
-    echo "linking .gitconfig ..."
+    print -P "%f{yellow}linking .gitconfig ...%f\n"
     ln .gitconfig $GITCONFIG
 fi
 
 if [ ! -e "$GITIGNORE" ]; then
-    echo "linking .gitignore ..."
+    print -P "%f{yellow}linking .gitignore ...%f\n"
     ln .gitignore $GITIGNORE
 fi
 
@@ -43,7 +43,7 @@ brew install pyenv
 pyenv update && pyenv install-latest
 
 # nvm
-echo "--- installing .nvm ---"
+print -P "%f{yellow}--- installing .nvm ---%f\n"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # node
@@ -56,13 +56,13 @@ else
 fi
 
 # vim
-echo "--- setting up .vimrc ---"
+print -P "%f{yellow}--- setting up .vimrc ---%f\n"
 zsh ./vim/install.sh
 
 # vscode
-echo "--- installing VSCode plugins ---"
+print -P "%f{yellow}--- installing VSCode plugins ---%f\n"
 zsh ./vscode/install.sh
 
 source $ZSHRC
 
-echo "exit 0"
+print -P "%f{green}exit 0 %f\n"
