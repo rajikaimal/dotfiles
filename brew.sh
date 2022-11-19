@@ -15,6 +15,7 @@ BREW_PREFIX=$(brew --prefix)
 brew install coreutils
 # Install some other useful utilities like `sponge`.
 brew install moreutils
+brew install nvim
 brew install findutils
 brew install act
 brew install jpeg
