@@ -3,4 +3,6 @@
 alias gl='git pull'
 alias gp='git push'
 alias gst='git status'
-alias ga='git add --all'
+alias ga='git add .'
+alias gcm='git commit -m'
+alias gcam='git commit -m -a'
