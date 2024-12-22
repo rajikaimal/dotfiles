@@ -93,6 +93,9 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -915,18 +918,58 @@ require('lazy').setup({
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
+  -- {
+  --   'nvim-tree/nvim-tree.lua',
+  --   config = function()
+  --     require('nvim-tree').setup {
+  --       actions = {
+  --         open_file = {
+  --           quit_on_open = true,
+  --         },
+  --       },
+  --       filters = {
+  --         custom = { '.git', 'node_modules', '.vscode' },
+  --         dotfiles = true,
+  --       },
+  --       view = {
+  --         adaptive_size = true,
+  --         float = {
+  --           enable = true,
+  --         },
+  --       },
+  --     }
+  --     VIM.KEYMAP.SET('N', '<LEADER>E', ':NVIMTREETOGGLE<CR>', { SILENT = TRUE })
+  --   END,
+  -- },
   {
-    'nvim-tree/nvim-tree.lua',
+    'echasnovski/mini.files',
+    version = false, -- Use the latest version
     config = function()
-      require('nvim-tree').setup {
-        actions = {
-          open_file = {
-            quit_on_open = true,
-          },
+      require('mini.files').setup {
+        -- Customize your configuration here
+        windows = {
+          preview = true, -- Enable file previews
+          width_focus = 30,
+          width_nofocus = 15,
+        },
+        mappings = {
+          go_in = '<CR>',
+          go_in_plus = '<CR>',
         },
       }
-      vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true })
     end,
+    opts = {
+      use_as_default_explorer = true,
+    },
+    keys = {
+      {
+        '<leader>e',
+        function()
+          require('mini.files').open()
+        end,
+        desc = 'Open MiniFiles',
+      },
+    },
   },
   {
     'rest-nvim/rest.nvim',
